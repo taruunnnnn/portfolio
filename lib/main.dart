@@ -74,80 +74,82 @@ class FirstRoute extends State<MyHomePage> {
     return Scaffold(
       backgroundColor: Colors.lime,
 
-      body: Column(
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+        child: Column(
 
 
-        children:[
+          children:[
 
-          Container(
-            margin: EdgeInsets.fromLTRB(0, 200, 0, 0),
-              child: Center(
-                child: Text(
-                  'Welcome aboard,',
-                  style: GoogleFonts.mukta(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black
+            Container(
+              margin: EdgeInsets.fromLTRB(0, 200, 0, 0),
+                child: Center(
+                  child: Text(
+                    'Welcome aboard,',
+                    style: GoogleFonts.openSans(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black
+                    ),
                   ),
                 ),
-              ),
-         ),
-           //welcome
+           ),
+             //welcome
 
-          Container(
-            margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
-            child: Text(
-              'This is a PORTFOLIO dedicated to a guy\nnamed...',
-              style: GoogleFonts.teko(
-                fontSize: 20,
-                color: Colors.white,
-              ),
-            ),
-          ),
-          //white font
-
-          Container(
-            margin: EdgeInsets.fromLTRB(170, 10, 0, 0),
-            child: Text(
-              'Tarun Srivastava',
-              style: GoogleFonts.mrDafoe(
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
-                color: Colors.black,
-              ),
-            ),
-          ),  //name
-
-          Container(
-            margin: EdgeInsets.fromLTRB(0, 130, 0, 0),
-            child: Center(
+            Container(
+              margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
               child: Text(
-                "Let's get",
-                style: GoogleFonts.fuzzyBubbles(
-                  fontSize: 20,
+                'This is a PORTFOLIO dedicated to a guy\nnamed...',
+                style: GoogleFonts.oswald(
+                  fontSize: 18,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+            //white font
+
+            Container(
+              margin: EdgeInsets.fromLTRB(170, 10, 0, 0),
+              child: Text(
+                'Tarun Srivastava',
+                style: GoogleFonts.mrDafoe(
+                  fontSize: 22,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
                 ),
               ),
-            ),
-          ), //let's get
+            ),  //name
 
-          Container(
-        margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
-        child: Center(
-          child: ElevatedButton(
-            style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all(Colors.black),
-            ),
+            Container(
+              margin: EdgeInsets.fromLTRB(0, 130, 0, 0),
+              child: Center(
+                child: Text(
+                  "Let's get",
+                  style: GoogleFonts.fuzzyBubbles(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
+                ),
+              ),
+            ), //let's get
 
-            onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return const SecondRoute(title: 'SecondRoute');
-            }));
-          },
-          child: Text('STARTED'),
+            Container(
+          margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
+          child: Center(
+            child: ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.black),
+              ),
+
+              onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return const SecondRoute(title: 'SecondRoute');
+              }));
+            },
+            child: Text('STARTED'),
+            ),
           ),
-        ),
     ),
 
 
@@ -155,7 +157,8 @@ class FirstRoute extends State<MyHomePage> {
 
 
 
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -205,8 +208,12 @@ class SecondRoute extends StatelessWidget {
           Center(
             child: Padding(
               padding: const EdgeInsets.fromLTRB(0, 40, 0, 0),
-              child: Image(
-              image: NetworkImage('https://media-exp1.licdn.com/dms/image/C4D03AQFj2w0KtW--nQ/profile-displayphoto-shrink_100_100/0/1651331846495?e=1671062400&v=beta&t=18X1iW1wIfD228TzMJuIWKwu1JVE0-rC17ChUY3EEVg')),
+              child: Container(
+                height: 100,
+                width: 150,
+                child: Image(
+                image: AssetImage('assets/portfolio.jpeg')),
+              ),
             ),
           ),
 ],
