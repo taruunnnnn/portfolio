@@ -74,79 +74,89 @@ class FirstRoute extends State<MyHomePage> {
     return Scaffold(
       backgroundColor: Colors.lime,
 
-
       body: Column(
 
-      children:[
 
-        Container(
-        margin: EdgeInsets.fromLTRB(60, 200, 0, 0),
-          child: Text(
-            'Welcome aboard,',
-            style: GoogleFonts.mukta(
-              fontSize: 40,
-              fontWeight: FontWeight.bold,
-              color: Colors.black
+        children:[
+
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 200, 0, 0),
+              child: Center(
+                child: Text(
+                  'Welcome aboard,',
+                  style: GoogleFonts.mukta(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black
+                  ),
+                ),
+              ),
+         ),
+           //welcome
+
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
+            child: Text(
+              'This is a PORTFOLIO dedicated to a guy\nnamed...',
+              style: GoogleFonts.teko(
+                fontSize: 20,
+                color: Colors.white,
+              ),
             ),
           ),
-       ),  //welcome
+          //white font
 
-        Container(
-          margin: EdgeInsets.fromLTRB(60, 10, 85, 0),
-          child: Text(
-            'This is a PORTFOLIO dedicated to a guy\nnamed...',
-            style: GoogleFonts.teko(
-              fontSize: 20,
-              color: Colors.white,
+          Container(
+            margin: EdgeInsets.fromLTRB(170, 10, 0, 0),
+            child: Text(
+              'Tarun Srivastava',
+              style: GoogleFonts.mrDafoe(
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
             ),
-          ),
-        ),  //white font
+          ),  //name
 
-        Container(
-          margin: EdgeInsets.fromLTRB(170, 10, 0, 0),
-          child: Text(
-            'Tarun Srivastava',
-            style: GoogleFonts.mrDafoe(
-              fontSize: 25,
-              fontWeight: FontWeight.bold,
-              color: Colors.black,
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 130, 0, 0),
+            child: Center(
+              child: Text(
+                "Let's get",
+                style: GoogleFonts.fuzzyBubbles(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                ),
+              ),
             ),
-          ),
-        ),  //name
+          ), //let's get
 
-        Container(
-          margin: EdgeInsets.fromLTRB(50, 130, 0, 0),
-          child: Text(
-            "Let's get",
-            style: GoogleFonts.fuzzyBubbles(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: Colors.black,
+          Container(
+        margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
+        child: Center(
+          child: ElevatedButton(
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all(Colors.black),
             ),
-          ),
-        ), //let's get
 
-        Container(
-      margin: EdgeInsets.fromLTRB(50, 0, 0, 0),
-      child: ElevatedButton(
-        style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(Colors.black),
+            onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return const SecondRoute(title: 'SecondRoute');
+            }));
+          },
+          child: Text('STARTED'),
+          ),
         ),
+    ),
 
-        onPressed: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return const SecondRoute(title: 'SecondRoute');
-        }));
-      },
-      child: Text('STARTED'),
+
+
+
+
+
+        ],
       ),
-    ),
-
-
-
-
-    ]
-    ),
     );
   }
 }
@@ -160,103 +170,128 @@ class SecondRoute extends StatelessWidget {
       backgroundColor: Colors.lime,
       appBar: AppBar(
         backgroundColor: Colors.lime,
-        title: Padding(
-          padding: const EdgeInsets.fromLTRB(89,0,0,0),
-          child: Text(
+          centerTitle: true,
+
+          title: Text(
               'PORTFOLIO',
                style: GoogleFonts.oswald(
                  color: Colors.black,
                  fontWeight: FontWeight.bold,
                ),
           ),
-        ),
+
       ),
-      body: Column(
+      body: ListView(
         children: [
 
-          Row(
-            children: [
 
-              Container(
+         Stack(
+           children: [
+             Container(
+               margin: EdgeInsets.fromLTRB(0, 40, 0, 0),
+               color: Colors.black,
+               height: 100 ,
+               width: double.infinity,
+             ),
 
-                color: Colors.black,
-                height: 100,
-                width: 120,
-                margin: EdgeInsets.fromLTRB(0, 40, 0, 0),
-
-              ),
-
-              Padding(
-                padding: const EdgeInsets.fromLTRB(38, 40, 0, 0),
-                child: Image(
-                image: NetworkImage('https://media-exp1.licdn.com/dms/image/C4D03AQFj2w0KtW--nQ/profile-displayphoto-shrink_100_100/0/1651331846495?e=1671062400&v=beta&t=18X1iW1wIfD228TzMJuIWKwu1JVE0-rC17ChUY3EEVg')),
-              ),
-
-              Container(
-                color: Colors.black,
-                height: 100,
-                width: 115,
-                margin: EdgeInsets.fromLTRB(38, 40, 0, 0),
-              ),
-            ],
-          ),  //photo
+          Center(
+            child: Container(
+              margin: EdgeInsets.fromLTRB(0, 40, 0, 0),
+              color: Colors.lime,
+              height: 100 ,
+              width: 200,
+            ),
+          ),
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(0, 40, 0, 0),
+              child: Image(
+              image: NetworkImage('https://media-exp1.licdn.com/dms/image/C4D03AQFj2w0KtW--nQ/profile-displayphoto-shrink_100_100/0/1651331846495?e=1671062400&v=beta&t=18X1iW1wIfD228TzMJuIWKwu1JVE0-rC17ChUY3EEVg')),
+            ),
+          ),
+],
+    ),
+         
+    //photo
 
           SizedBox(
             height: 20,
           ),
 
-          Divider(
-            height: 30,
-            thickness: 1,
-            indent: 50,
-            endIndent: 50,
-            color: Colors.black,
-          ),
-
-          Text(
-            'TARUN SRIVASTAVA',
-            style: GoogleFonts.italiana(
-              fontWeight: FontWeight.bold,
-              fontSize: 30,
+         Padding(
+           padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+           child: Column(
+           children: [
+            Divider(
+              height: 30,
+              thickness: 1,
+              indent: 50,
+              endIndent: 50,
+              color: Colors.black,
             ),
-          ),  //name
 
-          Divider(
-            height: 30,
-            thickness: 1,
-            indent: 50,
-            endIndent: 50,
-            color: Colors.black,
-          ),
+            Center(
+              child: Text(
+                'TARUN SRIVASTAVA',
+                style: GoogleFonts.italiana(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 30,
+                ),
+              ),
+            ),  //name
 
-          SizedBox(
-            height: 30,
-          ),
+            Divider(
+              height: 30,
+              thickness: 1,
+              indent: 50,
+              endIndent: 50,
+              color: Colors.black,
+            ),
 
-          Text(
-            'a highly competitive,ambitious,\norganised sophomore specialised\nin computer science , with being \nskilled in multiple domains and\nis fascinated by the concepts of\nMachine Learning and AppD.',
-          style: GoogleFonts.openSans(
-            fontSize: 19,
-            fontWeight: FontWeight.bold,
-            color: Colors.black38,
-          ),
-          ),
+            SizedBox(
+              height: 30,
+            ),
 
-          SizedBox(
-            height: 20,
-          ),
+            Container(
+              padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+              margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
+              child: Center(
+                child: Text(
+                  'a highly competitive,ambitious, organised sophomore specialised in computer science , with being skilled in multiple domains and is fascinated by the concepts of Machine Learning and AppD.',
+                style: GoogleFonts.openSans(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black38,
 
-          Padding(
-            padding: const EdgeInsets.fromLTRB(46, 0, 0, 0),
-            child: Text(
-              'this portfolio serves as an introdu\nction and covers details about my personal as well as professional life\nsuch as my projects,skills, qualifica\ntions, certifications, my contacts\nand a brief detail about me..........',
-              style: GoogleFonts.openSans(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-                color: Colors.black38,
+                ),
+                ),
               ),
             ),
-          ),
+
+            SizedBox(
+              height: 40,
+            ),
+
+            
+              Container(
+                padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+                margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
+                child: Center(
+                  child: Text(
+                    'this portfolio serves as an introduction and covers details about my personal as well as professional life such as my projects,skills, qualifications, certifications, my contacts and a brief detail about me..........',
+                    style: GoogleFonts.openSans(
+
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black38,
+                    ),
+                  ),
+                ),
+              ),
+
+                 ],
+           ),
+         ),
+
+          
 
 
 
@@ -276,6 +311,7 @@ class SecondRoute extends StatelessWidget {
         backgroundColor: Colors.black54,
 
         child: ListView(
+
           children: [
 
             Container(
@@ -395,7 +431,6 @@ class SecondRoute extends StatelessWidget {
               indent: 30,
               endIndent: 30,
             ),
-
           ],
         ),
       ),
@@ -404,15 +439,15 @@ class SecondRoute extends StatelessWidget {
         color: Colors.lime,
         child: Row(
           children: [
-            TextButton(
-              onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return const skills(title: 'skills');
-                  }));
-                },
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(80, 0, 0, 0),
+            Expanded(
+              child: TextButton(
+                onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      return const skills(title: 'skills');
+                    }));
+                  },
                   child: Text(
+
                     'SKILLS',
                     style: GoogleFonts.openSans(
                       color: Colors.black,
@@ -420,27 +455,27 @@ class SecondRoute extends StatelessWidget {
 
                     ),
 
-                  ),
-                ),),
+                  ),),
+            ),
 
-            TextButton(
+            Expanded(
+              
+              child: TextButton(
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return const project(title: 'project');
                 }));
               },
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(110, 0, 0, 0),
-                child: Text(
-                  'PROJECTS',
-                  style: GoogleFonts.openSans(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-
-                  ),
+              child: Text(
+                'PROJECTS',
+                style: GoogleFonts.openSans(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
 
                 ),
+
               ),),
+            ),
 
           ],
         ),
@@ -459,132 +494,99 @@ class contact extends StatelessWidget {
       backgroundColor: Colors.lime,
       appBar: AppBar(
         backgroundColor: Colors.lime,
-        title: Padding(
-          padding: const EdgeInsets.fromLTRB(80, 0, 0, 0),
-          child: Text(
-            'MY CONTACTS',
+        centerTitle: true,
+          title: Text(
+            'CONTACTS',
             style: GoogleFonts.oswald(
               fontWeight: FontWeight.bold,
               color: Colors.black,
             ),
           ),
-        ),
       ),
 
-        body: ListView(
-            children: [
-              Padding(
-                padding: const EdgeInsets.fromLTRB(9, 20, 0, 0),
-                child: Text(
-                  'You can reach out to me through the given contacts.',
-                  style: GoogleFonts.openSans(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 15
-                  ),
+        body: Padding(
+          padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+          child: Column(
+              children: [
+
+                SizedBox(
+                  height: 20,
                 ),
-              ),
+                Container(
 
-              Divider(
-                thickness: 1,
-                height: 40,
-                color: Colors.black,
-                indent: 30,
-                endIndent: 30,
-              ),
-
-              Padding(
-                padding: const EdgeInsets.fromLTRB(30, 20, 30, 0),
-                child: Container(
-
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(60, 20, 0, 0),
-                        child: Row(
-                          children: [
-
-                            Icon(
-                              Icons.call,
-                              color: Colors.white,
-                            ),
-                            Text(
-                              '         +91 7081968429',
-                              style: GoogleFonts.openSans(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(60, 20, 0, 0),
-                        child: Row(
-                          children: [
-
-                            Icon(
-                              Icons.mail,
-                              color: Colors.white,
-                            ),
-                            Text(
-                              '          tarunsri0017@gmail.com',
-                              style: GoogleFonts.openSans(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                  
-                  height: 120,
-                  decoration: BoxDecoration(
-                    color: Colors.black,
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                ),
-              ),
-
-              SizedBox(
-                height: 40,
-              ),
-
-              Padding(
-                padding: const EdgeInsets.fromLTRB(90, 20, 0, 0),
-                child: Text(
-                  'You can also pitch your project.',
-                  style: GoogleFonts.openSans(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 15
-                  ),
-                ),
-              ),
-
-              Divider(
-                thickness: 1,
-                height: 40,
-                color: Colors.black,
-                indent: 30,
-                endIndent: 30,
-              ),
-
-              Padding(
-                padding: const EdgeInsets.fromLTRB(30, 20, 30, 0),
-                child: Container(
-
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(12, 12, 0, 0),
+                  child: Center(
                     child: Text(
-                      'hello,\n \n My name is "your name" and my email address is\n"your email address" and I would like to discuss\nabout "this project."',
+                      'You can reach out to me through the given contacts.',
                       style: GoogleFonts.openSans(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 13
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15
+                      ),
+                    ),
+                  ),
+                ),
+
+                Divider(
+                  thickness: 1,
+                  height: 40,
+                  color: Colors.black,
+                  indent: 30,
+                  endIndent: 30,
+                ),
+
+                Container(
+                  margin: EdgeInsets.fromLTRB(30, 0, 30, 0),
+
+                  child: Center(
+                    child: Container(
+                      padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                      margin: EdgeInsets.fromLTRB(10, 20, 10, 0),
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+
+                              Center(
+                                child: Icon(
+                                  Icons.call,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '         +91 7081968429',
+                                  style: GoogleFonts.openSans(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+
+                            SizedBox(
+                              height: 10,
+                            ),
+
+
+                            Row(
+                              children: [
+
+                                Icon(
+                                  Icons.mail,
+                                  color: Colors.white,
+                                ),
+                                Text(
+                                  '          tarunsri0017@gmail.com',
+                                  style: GoogleFonts.openSans(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+
+                        ],
                       ),
                     ),
                   ),
@@ -595,14 +597,61 @@ class contact extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                   ),
                 ),
-              ),
+
+                SizedBox(
+                  height: 40,
+                ),
+
+                Center(
+                  child: Text(
+                    'You can also pitch your project.',
+                    style: GoogleFonts.openSans(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15
+                    ),
+                  ),
+                ),
+
+                Divider(
+                  thickness: 1,
+                  height: 40,
+                  color: Colors.black,
+                  indent: 30,
+                  endIndent: 30,
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(30, 20, 30, 0),
+                  child: Container(
+
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(12, 12, 0, 0),
+                      child: Text(
+                        'hello,\n \n My name is "your name" and my email address is\n"your email address" and I would like to discuss\nabout "this project."',
+                        style: GoogleFonts.openSans(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 13
+                        ),
+                      ),
+                    ),
+
+                    height: 120,
+                    decoration: BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                ),
 
 
 
 
 
 
-            ]
+              ]
+          ),
         ),
 
 
@@ -692,15 +741,13 @@ class skills extends StatelessWidget {
       backgroundColor: Colors.lime,
       appBar: AppBar(
         backgroundColor: Colors.lime,
-        title: Padding(
-          padding: const EdgeInsets.fromLTRB(105, 0, 0, 0),
-          child: Text(
-            'SKILLS',
-            style: GoogleFonts.oswald(
-              fontWeight: FontWeight.bold,
-              fontSize: 20,
-              color: Colors.black,
-            ),
+        centerTitle: true,
+        title: Text(
+          'SKILLS',
+          style: GoogleFonts.oswald(
+            fontWeight: FontWeight.bold,
+
+            color: Colors.black,
           ),
         ),
       ),
@@ -708,13 +755,15 @@ class skills extends StatelessWidget {
       body: ListView(
           children: [
             Padding(
-              padding: const EdgeInsets.fromLTRB(100, 20, 70, 0),
-              child: Text(
-                'Skills are our greatest asset.',
-                style: GoogleFonts.openSans(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 15
+              padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
+              child: Center(
+                child: Text(
+                  'Skills are our greatest asset.',
+                  style: GoogleFonts.openSans(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15
+                  ),
                 ),
               ),
             ),
@@ -733,7 +782,7 @@ class skills extends StatelessWidget {
                 child: Column(
                  children: [
                     Container(
-                      margin: EdgeInsets.fromLTRB(10, 4, 0, 0),
+                      margin: EdgeInsets.fromLTRB(10, 4, 10, 0),
                       child: Text(
                   'PROGRAMING LANGUAGE',
                   style: GoogleFonts.openSans(
@@ -753,9 +802,9 @@ class skills extends StatelessWidget {
                    ),
 
                    Container(
-                     margin: EdgeInsets.fromLTRB(20, 10, 0, 0),
+                     margin: EdgeInsets.fromLTRB(20, 10, 20, 0),
                      child: Text(
-                       'I am well versed with all the core concepts\nof the coding languages such as JAVA, C,\nC++, PYTHON, and I find myself enough skilled\nto apply my knowledge in building models which\nincreases effectiveness.',
+                       'I am well versed with all the core concepts of the coding languages such as JAVA, C, C++, PYTHON, and I find myself enough skilled to apply my knowledge in building models which increases effectiveness.',
                      style: GoogleFonts.openSans(
                        fontSize: 12,
                        color: Colors.white
@@ -779,7 +828,7 @@ class skills extends StatelessWidget {
                 child: Column(
                   children: [
                     Container(
-                      margin: EdgeInsets.fromLTRB(10, 4, 0, 0),
+                      margin: EdgeInsets.fromLTRB(10, 4, 10, 0),
                       child: Text(
                         'MARKUP LANGUAGE',
                         style: GoogleFonts.openSans(
@@ -799,9 +848,9 @@ class skills extends StatelessWidget {
                     ),
 
                     Container(
-                      margin: EdgeInsets.fromLTRB(20, 10, 0, 0),
+                      margin: EdgeInsets.fromLTRB(20, 10, 20, 0),
                       child: Text(
-                        'I have introductory knowledge of HTML, CSS\nand find myself able to create a website capable\nof displays useful insights and knowledge',
+                        'I have introductory knowledge of HTML, CSS and find myself able to create a website capable of displays useful insights and knowledge',
                         style: GoogleFonts.openSans(
                             fontSize: 12,
                             color: Colors.white
@@ -825,7 +874,7 @@ class skills extends StatelessWidget {
                 child: Column(
                   children: [
                     Container(
-                      margin: EdgeInsets.fromLTRB(10, 4, 0, 0),
+                      margin: EdgeInsets.fromLTRB(10, 4, 10, 0),
                       child: Text(
                         'APP DEVELOPMENT',
                         style: GoogleFonts.openSans(
@@ -845,9 +894,9 @@ class skills extends StatelessWidget {
                     ),
 
                     Container(
-                      margin: EdgeInsets.fromLTRB(6, 10, 0, 0),
+                      margin: EdgeInsets.fromLTRB(20, 10, 20, 0),
                       child: Text(
-                        'I find my skill in APP DEVELOPMENT through\nFLUTTER to be my most valuable skill which\ncombined with my interest to fuse my vision\nwith coding can give birth to wonderful\nsoftwares.',
+                        'I find my skill in APP DEVELOPMENT through FLUTTER to be my most valuable skill which combined with my interest to fuse my vision with coding can give birth to wonderful softwares.',
                         style: GoogleFonts.openSans(
                             fontSize: 12,
                             color: Colors.white
@@ -871,7 +920,7 @@ class skills extends StatelessWidget {
                 child: Column(
                   children: [
                     Container(
-                      margin: EdgeInsets.fromLTRB(10, 4, 0, 0),
+                      margin: EdgeInsets.fromLTRB(10, 4, 10, 0),
                       child: Text(
                         'MANAGEMENT AND PROFESSIONAL',
                         style: GoogleFonts.openSans(
@@ -885,15 +934,15 @@ class skills extends StatelessWidget {
                     Divider(
                       thickness: 1,
                       color: Colors.white,
-                      indent: 60,
-                      endIndent: 60,
-                      height: 30,
+                      indent: 20,
+                      endIndent: 20,
+                      height: 20,
                     ),
 
                     Container(
-                      margin: EdgeInsets.fromLTRB(20, 10, 0, 0),
+                      margin: EdgeInsets.fromLTRB(20, 10, 20, 0),
                       child: Text(
-                        'According to my peers, I am great at persuasion\nnegotiation and team management.Also the art\nof giving flawless output with efficient working\nalgorithms make me a great asset in any team.',
+                        'According to my peers, I am great at persuasion negotiation and team management.Also the art of giving flawless output with efficient working algorithms make me a great asset in any team.',
                         style: GoogleFonts.openSans(
                             fontSize: 12,
                             color: Colors.white
@@ -932,30 +981,30 @@ class project extends StatelessWidget {
 
       appBar: AppBar(
         backgroundColor: Colors.lime,
-        title: Padding(
-          padding: const EdgeInsets.fromLTRB(93, 0, 0, 0),
-          child: Text(
-            'PROJECTS',
-            style: GoogleFonts.oswald(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              
-            ),
+        centerTitle: true,
+        title: Text(
+          'PROJECTS',
+          style: GoogleFonts.oswald(
+            color: Colors.black,
+            fontWeight: FontWeight.bold,
+
           ),
         ),
       ),
       
       body: ListView(
         children: [
-          Padding(
-            padding: const EdgeInsets.fromLTRB(120, 20, 70, 0),
-            child: Text(
-              'Number of Projects : 0',
-            style: GoogleFonts.openSans(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              fontSize: 15
-            ),
+          Container(
+            padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+            child: Center(
+              child: Text(
+                'Number of Projects : 0',
+              style: GoogleFonts.openSans(
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                fontSize: 15
+              ),
+              ),
             ),
           ),
 
@@ -970,11 +1019,13 @@ class project extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.fromLTRB(30, 20, 30, 0),
             child: Container(
-              padding: EdgeInsets.fromLTRB(150, 80, 0, 0),
-              child: Text(
-                'empty',
-                style: GoogleFonts.openSans(
-                  color: Colors.white,
+
+              child: Center(
+                child: Text(
+                  'empty',
+                  style: GoogleFonts.openSans(
+                    color: Colors.white,
+                  ),
                 ),
               ),
               height: 180,
@@ -988,11 +1039,13 @@ class project extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.fromLTRB(30, 20, 30, 0),
             child: Container(
-              padding: EdgeInsets.fromLTRB(150, 80, 0, 0),
-              child: Text(
-                'empty',
-                style: GoogleFonts.openSans(
-                  color: Colors.white,
+
+              child: Center(
+                child: Text(
+                  'empty',
+                  style: GoogleFonts.openSans(
+                    color: Colors.white,
+                  ),
                 ),
               ),
               height: 180,
@@ -1006,11 +1059,13 @@ class project extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.fromLTRB(30, 20, 30, 0),
             child: Container(
-              padding: EdgeInsets.fromLTRB(150, 80, 0, 0),
-              child: Text(
-                'empty',
-                style: GoogleFonts.openSans(
-                  color: Colors.white,
+
+              child: Center(
+                child: Text(
+                  'empty',
+                  style: GoogleFonts.openSans(
+                    color: Colors.white,
+                  ),
                 ),
               ),
               height: 180,
@@ -1024,11 +1079,13 @@ class project extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.fromLTRB(30, 20, 30, 0),
             child: Container(
-              padding: EdgeInsets.fromLTRB(150, 80, 0, 0),
-              child: Text(
-                'empty',
-                style: GoogleFonts.openSans(
-                  color: Colors.white,
+
+              child: Center(
+                child: Text(
+                  'empty',
+                  style: GoogleFonts.openSans(
+                    color: Colors.white,
+                  ),
                 ),
               ),
               height: 180,
@@ -1042,11 +1099,13 @@ class project extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.fromLTRB(30, 20, 30, 20),
             child: Container(
-              padding: EdgeInsets.fromLTRB(150, 80, 0, 0),
-              child: Text(
-                'empty',
-                style: GoogleFonts.openSans(
-                  color: Colors.white,
+
+              child: Center(
+                child: Text(
+                  'empty',
+                  style: GoogleFonts.openSans(
+                    color: Colors.white,
+                  ),
                 ),
               ),
               height: 180,
@@ -1088,14 +1147,16 @@ class qual extends StatelessWidget {
 
         body: ListView(
             children: [
-              Padding(
-                padding: const EdgeInsets.fromLTRB(125, 20, 70, 0),
-                child: Text(
-                  'UNDERGRADUATION',
-                  style: GoogleFonts.openSans(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 15
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                  child: Text(
+                    'UNDERGRADUATION',
+                    style: GoogleFonts.openSans(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15
+                    ),
                   ),
                 ),
               ),
@@ -1109,26 +1170,32 @@ class qual extends StatelessWidget {
               ),
 
               Padding(
-                padding: const EdgeInsets.fromLTRB(30, 20, 30, 0),
+                padding: const EdgeInsets.all(15),
                 child: Container(
+                       padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
+                  margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
 
                   child: Column(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-                        child: Text(
-                            "Ajay Kumar Garg Engineering College   -   2021-25",
-                          style: GoogleFonts.openSans(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
+
+                         Center(
+                           child: Text(
+                              "AKGEC              -                2021-25",
+                            style: GoogleFonts.openSans(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
                     ),
+                         ),
+
+                      SizedBox(
+                        height: 30,
                       ),
 
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+
+                      Center(
                         child: Text(
-                          "                 Grade:                                           7.45",
+                          "Grade:                                      7.45",
                           style: GoogleFonts.openSans(
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
@@ -1139,7 +1206,7 @@ class qual extends StatelessWidget {
                   ),
 
 
-                  height: 100,
+
                   decoration: BoxDecoration(
                     color: Colors.black,
                     borderRadius: BorderRadius.circular(20),
@@ -1149,8 +1216,7 @@ class qual extends StatelessWidget {
 
 
 
-              Padding(
-                padding: const EdgeInsets.fromLTRB(150, 20, 70, 0),
+              Center(
                 child: Text(
                   'INTERMEDIATE',
                   style: GoogleFonts.openSans(
@@ -1208,10 +1274,11 @@ class qual extends StatelessWidget {
                 ),
               ),
 
+              SizedBox(
+                height: 20,
+              ),
 
-
-              Padding(
-                padding: const EdgeInsets.fromLTRB(150, 20, 0, 0),
+              Center(
                 child: Text(
                   'HIGHSCHOOL',
                   style: GoogleFonts.openSans(
@@ -1289,15 +1356,13 @@ class cert extends StatelessWidget {
       backgroundColor: Colors.lime,
       appBar: AppBar(
         backgroundColor: Colors.lime,
-        title: Padding(
-          padding: const EdgeInsets.fromLTRB(80, 0, 0, 0),
-          child: Text(
-            'CERTIFICATES',
-            style: GoogleFonts.oswald(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
+        centerTitle: true,
+        title: Text(
+          'CERTIFICATES',
+          style: GoogleFonts.oswald(
+            color: Colors.black,
+            fontWeight: FontWeight.bold,
 
-            ),
           ),
         ),
       ),
@@ -1305,17 +1370,20 @@ class cert extends StatelessWidget {
 
         body: ListView(
             children: [
-              Padding(
-                padding: const EdgeInsets.fromLTRB(113, 20, 70, 0),
-                child: Text(
-                  'Number of Certificates : 0',
-                  style: GoogleFonts.openSans(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 15
+                     SizedBox(
+                       height: 20,
+                     ),
+                Center(
+                  child: Text(
+                    'Number of Certificates : 0',
+                    style: GoogleFonts.openSans(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15
+                    ),
                   ),
                 ),
-              ),
+
 
               Divider(
                 thickness: 1,
@@ -1328,11 +1396,13 @@ class cert extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.fromLTRB(30, 20, 30, 0),
                 child: Container(
-                  padding: EdgeInsets.fromLTRB(150, 80, 0, 0),
-                  child: Text(
-                    'empty',
-                    style: GoogleFonts.openSans(
-                      color: Colors.white,
+
+                  child: Center(
+                    child: Text(
+                      'empty',
+                      style: GoogleFonts.openSans(
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                   height: 180,
@@ -1346,11 +1416,13 @@ class cert extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.fromLTRB(30, 20, 30, 0),
                 child: Container(
-                  padding: EdgeInsets.fromLTRB(150, 80, 0, 0),
-                  child: Text(
-                    'empty',
-                    style: GoogleFonts.openSans(
-                      color: Colors.white,
+
+                  child: Center(
+                    child: Text(
+                      'empty',
+                      style: GoogleFonts.openSans(
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                   height: 180,
@@ -1364,11 +1436,13 @@ class cert extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.fromLTRB(30, 20, 30, 0),
                 child: Container(
-                  padding: EdgeInsets.fromLTRB(150, 80, 0, 0),
-                  child: Text(
-                    'empty',
-                    style: GoogleFonts.openSans(
-                      color: Colors.white,
+
+                  child: Center(
+                    child: Text(
+                      'empty',
+                      style: GoogleFonts.openSans(
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                   height: 180,
@@ -1382,11 +1456,13 @@ class cert extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.fromLTRB(30, 20, 30, 0),
                 child: Container(
-                  padding: EdgeInsets.fromLTRB(150, 80, 0, 0),
-                  child: Text(
-                    'empty',
-                    style: GoogleFonts.openSans(
-                      color: Colors.white,
+
+                  child: Center(
+                    child: Text(
+                      'empty',
+                      style: GoogleFonts.openSans(
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                   height: 180,
@@ -1398,13 +1474,15 @@ class cert extends StatelessWidget {
               ),
 
               Padding(
-                padding: const EdgeInsets.fromLTRB(30, 20, 30, 20),
+                padding: const EdgeInsets.fromLTRB(30, 20, 30, 0),
                 child: Container(
-                  padding: EdgeInsets.fromLTRB(150, 80, 0, 0),
-                  child: Text(
-                    'empty',
-                    style: GoogleFonts.openSans(
-                      color: Colors.white,
+
+                  child: Center(
+                    child: Text(
+                      'empty',
+                      style: GoogleFonts.openSans(
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                   height: 180,
