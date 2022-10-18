@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'package:url_launcher/url_launcher_string.dart';
+
+
 
 
 
@@ -86,10 +85,11 @@ class FirstRoute extends State<MyHomePage> {
                 child: Center(
                   child: Text(
                     'Welcome aboard,',
-                    style: GoogleFonts.openSans(
+                    style: TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black
+                      color: Colors.black,
+                      fontFamily: 'OpenSans',
                     ),
                   ),
                 ),
@@ -100,9 +100,10 @@ class FirstRoute extends State<MyHomePage> {
               margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
               child: Text(
                 'This is a PORTFOLIO dedicated to a guy\nnamed...',
-                style: GoogleFonts.oswald(
+                style: TextStyle(
                   fontSize: 18,
                   color: Colors.white,
+                  fontFamily: 'Oswald',
                 ),
               ),
             ),
@@ -112,10 +113,11 @@ class FirstRoute extends State<MyHomePage> {
               margin: EdgeInsets.fromLTRB(170, 10, 0, 0),
               child: Text(
                 'Tarun Srivastava',
-                style: GoogleFonts.mrDafoe(
+                style: TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
+                  fontFamily: 'MrDafoe',
                 ),
               ),
             ),  //name
@@ -125,10 +127,11 @@ class FirstRoute extends State<MyHomePage> {
               child: Center(
                 child: Text(
                   "Let's get",
-                  style: GoogleFonts.fuzzyBubbles(
+                  style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                     color: Colors.black,
+                    fontFamily: 'OpenSans',
                   ),
                 ),
               ),
@@ -177,9 +180,10 @@ class SecondRoute extends StatelessWidget {
 
           title: Text(
               'PORTFOLIO',
-               style: GoogleFonts.oswald(
+               style: TextStyle(
                  color: Colors.black,
                  fontWeight: FontWeight.bold,
+                 fontFamily: 'Oswald',
                ),
           ),
 
@@ -240,9 +244,10 @@ class SecondRoute extends StatelessWidget {
             Center(
               child: Text(
                 'TARUN SRIVASTAVA',
-                style: GoogleFonts.italiana(
+                style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 30,
+                  fontFamily: 'Italiana',
                 ),
               ),
             ),  //name
@@ -265,9 +270,10 @@ class SecondRoute extends StatelessWidget {
               child: Center(
                 child: Text(
                   'a highly competitive,ambitious, organised sophomore specialised in computer science , with being skilled in multiple domains and is fascinated by the concepts of Machine Learning and AppD.',
-                style: GoogleFonts.openSans(
+                style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.black38,
+                  fontFamily: 'OpenSans',
 
                 ),
                 ),
@@ -285,10 +291,11 @@ class SecondRoute extends StatelessWidget {
                 child: Center(
                   child: Text(
                     'this portfolio serves as an introduction and covers details about my personal as well as professional life such as my projects,skills, qualifications, certifications, my contacts and a brief detail about me..........',
-                    style: GoogleFonts.openSans(
+                    style: TextStyle(
 
                       fontWeight: FontWeight.bold,
                       color: Colors.black38,
+                      fontFamily: 'OpenSans',
                     ),
                   ),
                 ),
@@ -328,10 +335,11 @@ class SecondRoute extends StatelessWidget {
                  padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
                  child: Text(
                    'Content',
-                   style: GoogleFonts.openSans(
+                   style: TextStyle(
                      color: Colors.white,
                      fontWeight: FontWeight.bold,
                      fontSize: 30,
+                     fontFamily: 'OpenSans',
                    ),
                  ),
                ),
@@ -346,10 +354,11 @@ class SecondRoute extends StatelessWidget {
             ListTile(
               title: Text(
                 '                  Contact me',
-                style: GoogleFonts.openSans(
+                style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 17,
+                  fontFamily: 'OpenSans',
                 ),
               ),
               onTap: () {
@@ -370,10 +379,11 @@ class SecondRoute extends StatelessWidget {
             ListTile(
               title: Text(
                 '                   About me',
-                style: GoogleFonts.openSans(
+                style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 17,
+                  fontFamily: 'OpenSans',
                 ),
               ),
               onTap: () {
@@ -394,10 +404,11 @@ class SecondRoute extends StatelessWidget {
             ListTile(
               title: Text(
                 '                 Qualifications',
-                style: GoogleFonts.openSans(
+                style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 17,
+                  fontFamily: 'OpenSans',
                 ),
               ),
               onTap: () {
@@ -418,10 +429,11 @@ class SecondRoute extends StatelessWidget {
             ListTile(
               title: Text(
                 '                 Certifications',
-                style: GoogleFonts.openSans(
+                style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 17,
+                  fontFamily: 'OpenSans',
                 ),
               ),
               onTap: () {
@@ -456,9 +468,10 @@ class SecondRoute extends StatelessWidget {
                   child: Text(
 
                     'SKILLS',
-                    style: GoogleFonts.openSans(
+                    style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
+                      fontFamily: 'OpenSans',
 
                     ),
 
@@ -475,9 +488,10 @@ class SecondRoute extends StatelessWidget {
               },
               child: Text(
                 'PROJECTS',
-                style: GoogleFonts.openSans(
+                style: TextStyle(
                   color: Colors.black,
                   fontWeight: FontWeight.bold,
+                  fontFamily: 'OpenSans',
 
                 ),
 
@@ -504,9 +518,10 @@ class contact extends StatelessWidget {
         centerTitle: true,
           title: Text(
             'CONTACTS',
-            style: GoogleFonts.oswald(
+            style: TextStyle(
               fontWeight: FontWeight.bold,
               color: Colors.black,
+              fontFamily: 'Oswald',
             ),
           ),
       ),
@@ -522,12 +537,16 @@ class contact extends StatelessWidget {
                 Container(
 
                   child: Center(
-                    child: Text(
-                      'You can reach out to me through the given contacts.',
-                      style: GoogleFonts.openSans(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(20, 10, 0, 0),
+                      child: Text(
+                        'You can reach out to me through the given contacts.',
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                          fontFamily: 'OpenSans',
+                        ),
                       ),
                     ),
                   ),
@@ -562,9 +581,10 @@ class contact extends StatelessWidget {
                               Center(
                                 child: Text(
                                   '         +91 7081968429',
-                                  style: GoogleFonts.openSans(
+                                  style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold,
+                                    fontFamily: 'OpenSans',
                                   ),
                                 ),
                               ),
@@ -585,9 +605,10 @@ class contact extends StatelessWidget {
                                 ),
                                 Text(
                                   '          tarunsri0017@gmail.com',
-                                  style: GoogleFonts.openSans(
+                                  style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold,
+                                    fontFamily: 'OpenSans',
                                   ),
                                 ),
                               ],
@@ -612,10 +633,11 @@ class contact extends StatelessWidget {
                 Center(
                   child: Text(
                     'You can also pitch your project.',
-                    style: GoogleFonts.openSans(
+                    style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
-                        fontSize: 15
+                        fontSize: 15,
+                      fontFamily: 'OpenSans',
                     ),
                   ),
                 ),
@@ -636,10 +658,11 @@ class contact extends StatelessWidget {
                       padding: const EdgeInsets.fromLTRB(12, 12, 0, 0),
                       child: Text(
                         'hello,\n \n My name is "your name" and my email address is\n"your email address" and I would like to discuss\nabout "this project."',
-                        style: GoogleFonts.openSans(
+                        style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
-                          fontSize: 13
+                          fontSize: 13,
+                          fontFamily: 'OpenSans',
                         ),
                       ),
                     ),
@@ -680,9 +703,10 @@ class about extends StatelessWidget {
         centerTitle: true,
         title: Text(
           'About me',
-          style: GoogleFonts.oswald(
+          style: TextStyle(
             fontWeight: FontWeight.bold,
-            color: Colors.black
+            color: Colors.black,
+            fontFamily: 'Oswald',
           ),
         ),
       ),
@@ -693,10 +717,11 @@ class about extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(165, 20, 30, 0),
                 child: Text(
                   'Thank you',
-                  style: GoogleFonts.openSans(
+                  style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
-                      fontSize: 15
+                      fontSize: 15,
+                    fontFamily: 'OpenSans',
                   ),
                 ),
               ),
@@ -715,9 +740,9 @@ class about extends StatelessWidget {
                   padding: EdgeInsets.fromLTRB(20, 20, 0, 0),
                   child: Text(
                     "So this is it, you have made this far.\nyou must have been well aware of my professional front by now.\nLet me introduce myself through my eyes.\nFirst of all, Hello there, I'm Tarun.\nI hail from a town named 'Gorakhpur'.\nInside my family , is my parents and \nan elder brother. I did my schooling\nthere and then shifted to Ghaziabad for\n my undergrad degree at AJAY KUMAR GARG\nENGINEERING COLLEGE with focus in\nComputer science.\n\nBefore college one can define me as\nan extremely interest oriented student\nwho loved to unbox all the spare devices\n of my house just to how it was built.\nBeen an computer geek since 9th and\nI personally find this field pretty cool.\nThen happened college. Where there's this\n whole different universe which not only\ngave me ample amount of opportunities\nto explore domains of my own interest,\nbut also provided me with an community\nwhere people love stuff just as I do.\n\nSo there starts my primary ambition.\nTo gain not only vast but complete \nknowledge of my field and reach to \nan expert level in it in order to\nget a place in an organisation or\ncreate my own space where I am embedded\n as a team, with the ability to think,indulge\nand create models and devices which inculcate\n a sense of help among the needy and contributes\nin making this world a better place.",
-                    style: GoogleFonts.openSans(
+                    style: TextStyle(
                       color: Colors.white,
-
+                      fontFamily: 'OpenSans',
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -751,9 +776,9 @@ class skills extends StatelessWidget {
         centerTitle: true,
         title: Text(
           'SKILLS',
-          style: GoogleFonts.oswald(
+          style: TextStyle(
             fontWeight: FontWeight.bold,
-
+            fontFamily: 'Oswald',
             color: Colors.black,
           ),
         ),
@@ -766,10 +791,11 @@ class skills extends StatelessWidget {
               child: Center(
                 child: Text(
                   'Skills are our greatest asset.',
-                  style: GoogleFonts.openSans(
+                  style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
-                      fontSize: 15
+                      fontSize: 15,
+                    fontFamily: 'OpenSans',
                   ),
                 ),
               ),
@@ -792,10 +818,11 @@ class skills extends StatelessWidget {
                       margin: EdgeInsets.fromLTRB(10, 4, 10, 0),
                       child: Text(
                   'PROGRAMING LANGUAGE',
-                  style: GoogleFonts.openSans(
+                  style: TextStyle(
                       color: Colors.white,
                       fontSize: 13,
                       fontWeight: FontWeight.bold,
+                    fontFamily: 'OpenSans',
                   ),
                 ),
                     ),
@@ -812,9 +839,10 @@ class skills extends StatelessWidget {
                      margin: EdgeInsets.fromLTRB(20, 10, 20, 0),
                      child: Text(
                        'I am well versed with all the core concepts of the coding languages such as JAVA, C, C++, PYTHON, and I find myself enough skilled to apply my knowledge in building models which increases effectiveness.',
-                     style: GoogleFonts.openSans(
+                     style: TextStyle(
                        fontSize: 12,
-                       color: Colors.white
+                       color: Colors.white,
+                       fontFamily: 'OpenSans',
                      ),
                      ),
                    )
@@ -838,10 +866,11 @@ class skills extends StatelessWidget {
                       margin: EdgeInsets.fromLTRB(10, 4, 10, 0),
                       child: Text(
                         'MARKUP LANGUAGE',
-                        style: GoogleFonts.openSans(
+                        style: TextStyle(
                           color: Colors.white,
                           fontSize: 13,
                           fontWeight: FontWeight.bold,
+                          fontFamily: 'OpenSans',
                         ),
                       ),
                     ),
@@ -858,9 +887,10 @@ class skills extends StatelessWidget {
                       margin: EdgeInsets.fromLTRB(20, 10, 20, 0),
                       child: Text(
                         'I have introductory knowledge of HTML, CSS and find myself able to create a website capable of displays useful insights and knowledge',
-                        style: GoogleFonts.openSans(
+                        style: TextStyle(
                             fontSize: 12,
-                            color: Colors.white
+                            color: Colors.white,
+                          fontFamily: 'OpenSans',
                         ),
                       ),
                     )
@@ -884,10 +914,11 @@ class skills extends StatelessWidget {
                       margin: EdgeInsets.fromLTRB(10, 4, 10, 0),
                       child: Text(
                         'APP DEVELOPMENT',
-                        style: GoogleFonts.openSans(
+                        style: TextStyle(
                           color: Colors.white,
                           fontSize: 13,
                           fontWeight: FontWeight.bold,
+                          fontFamily: 'OpenSans',
                         ),
                       ),
                     ),
@@ -904,9 +935,10 @@ class skills extends StatelessWidget {
                       margin: EdgeInsets.fromLTRB(20, 10, 20, 0),
                       child: Text(
                         'I find my skill in APP DEVELOPMENT through FLUTTER to be my most valuable skill which combined with my interest to fuse my vision with coding can give birth to wonderful softwares.',
-                        style: GoogleFonts.openSans(
+                        style: TextStyle(
                             fontSize: 12,
-                            color: Colors.white
+                            color: Colors.white,
+                          fontFamily: 'OpenSans',
                         ),
                       ),
                     )
@@ -930,10 +962,11 @@ class skills extends StatelessWidget {
                       margin: EdgeInsets.fromLTRB(10, 4, 10, 0),
                       child: Text(
                         'MANAGEMENT AND PROFESSIONAL',
-                        style: GoogleFonts.openSans(
+                        style: TextStyle(
                           color: Colors.white,
                           fontSize: 13,
                           fontWeight: FontWeight.bold,
+                          fontFamily: 'OpenSans',
                         ),
                       ),
                     ),
@@ -950,9 +983,10 @@ class skills extends StatelessWidget {
                       margin: EdgeInsets.fromLTRB(20, 10, 20, 0),
                       child: Text(
                         'According to my peers, I am great at persuasion negotiation and team management.Also the art of giving flawless output with efficient working algorithms make me a great asset in any team.',
-                        style: GoogleFonts.openSans(
+                        style: TextStyle(
                             fontSize: 12,
-                            color: Colors.white
+                            color: Colors.white,
+                          fontFamily: 'OpenSans',
                         ),
                       ),
                     )
@@ -991,9 +1025,10 @@ class project extends StatelessWidget {
         centerTitle: true,
         title: Text(
           'PROJECTS',
-          style: GoogleFonts.oswald(
+          style: TextStyle(
             color: Colors.black,
             fontWeight: FontWeight.bold,
+            fontFamily: 'Oswald',
 
           ),
         ),
@@ -1006,10 +1041,11 @@ class project extends StatelessWidget {
             child: Center(
               child: Text(
                 'Number of Projects : 0',
-              style: GoogleFonts.openSans(
+              style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.bold,
-                fontSize: 15
+                fontSize: 15,
+                fontFamily: 'OpenSans',
               ),
               ),
             ),
@@ -1030,8 +1066,9 @@ class project extends StatelessWidget {
               child: Center(
                 child: Text(
                   'empty',
-                  style: GoogleFonts.openSans(
+                  style: TextStyle(
                     color: Colors.white,
+                    fontFamily: 'OpenSans',
                   ),
                 ),
               ),
@@ -1050,8 +1087,9 @@ class project extends StatelessWidget {
               child: Center(
                 child: Text(
                   'empty',
-                  style: GoogleFonts.openSans(
+                  style: TextStyle(
                     color: Colors.white,
+                    fontFamily: 'OpenSans',
                   ),
                 ),
               ),
@@ -1070,8 +1108,9 @@ class project extends StatelessWidget {
               child: Center(
                 child: Text(
                   'empty',
-                  style: GoogleFonts.openSans(
+                  style: TextStyle(
                     color: Colors.white,
+                    fontFamily: 'OpenSans',
                   ),
                 ),
               ),
@@ -1090,8 +1129,9 @@ class project extends StatelessWidget {
               child: Center(
                 child: Text(
                   'empty',
-                  style: GoogleFonts.openSans(
+                  style: TextStyle(
                     color: Colors.white,
+                    fontFamily: 'OpenSans',
                   ),
                 ),
               ),
@@ -1110,8 +1150,9 @@ class project extends StatelessWidget {
               child: Center(
                 child: Text(
                   'empty',
-                  style: GoogleFonts.openSans(
+                  style: TextStyle(
                     color: Colors.white,
+                    fontFamily: 'OpenSans',
                   ),
                 ),
               ),
@@ -1145,9 +1186,10 @@ class qual extends StatelessWidget {
         centerTitle: true,
         title: Text(
           'QUALIFICATIONS',
-          style: GoogleFonts.oswald(
+          style: TextStyle(
             color: Colors.black,
             fontWeight: FontWeight.bold,
+            fontFamily: 'Oswald',
           ),
         ),
       ),
@@ -1159,10 +1201,11 @@ class qual extends StatelessWidget {
                   padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
                   child: Text(
                     'UNDERGRADUATION',
-                    style: GoogleFonts.openSans(
+                    style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
-                        fontSize: 15
+                        fontSize: 15,
+                      fontFamily: 'OpenSans',
                     ),
                   ),
                 ),
@@ -1188,9 +1231,10 @@ class qual extends StatelessWidget {
                          Center(
                            child: Text(
                               "AKGEC              -                2021-25",
-                            style: GoogleFonts.openSans(
+                            style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
+                              fontFamily: 'OpenSans',
                             ),
                     ),
                          ),
@@ -1203,9 +1247,10 @@ class qual extends StatelessWidget {
                       Center(
                         child: Text(
                           "Grade:                                      7.45",
-                          style: GoogleFonts.openSans(
+                          style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
+                            fontFamily: 'OpenSans',
                           ),
                         ),
                       ),
@@ -1226,10 +1271,11 @@ class qual extends StatelessWidget {
               Center(
                 child: Text(
                   'INTERMEDIATE',
-                  style: GoogleFonts.openSans(
+                  style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
-                      fontSize: 15
+                      fontSize: 15,
+                    fontFamily: 'OpenSans',
                   ),
                 ),
               ),
@@ -1252,9 +1298,10 @@ class qual extends StatelessWidget {
                         padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
                         child: Text(
                           "St. Joseph's School          -         2020",
-                          style: GoogleFonts.openSans(
+                          style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
+                            fontFamily: 'OpenSans',
                           ),
                         ),
                       ),
@@ -1263,9 +1310,10 @@ class qual extends StatelessWidget {
                         padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
                         child: Text(
                           "          Grade:                                    90.6%",
-                          style: GoogleFonts.openSans(
+                          style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
+                            fontFamily: 'OpenSans',
                           ),
                         ),
                       ),
@@ -1288,10 +1336,11 @@ class qual extends StatelessWidget {
               Center(
                 child: Text(
                   'HIGHSCHOOL',
-                  style: GoogleFonts.openSans(
+                  style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
-                      fontSize: 15
+                      fontSize: 15,
+                    fontFamily: 'OpenSans',
                   ),
                 ),
               ),
@@ -1314,9 +1363,10 @@ class qual extends StatelessWidget {
                         padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
                         child: Text(
                           "St. Joseph's School          -         2018",
-                          style: GoogleFonts.openSans(
+                          style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
+                            fontFamily: 'OpenSans',
                           ),
                         ),
                       ),
@@ -1325,9 +1375,10 @@ class qual extends StatelessWidget {
                         padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
                         child: Text(
                           "          Grade:                                    90.8%",
-                          style: GoogleFonts.openSans(
+                          style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
+                            fontFamily: 'OpenSans',
                           ),
                         ),
                       ),
@@ -1366,9 +1417,10 @@ class cert extends StatelessWidget {
         centerTitle: true,
         title: Text(
           'CERTIFICATES',
-          style: GoogleFonts.oswald(
+          style: TextStyle(
             color: Colors.black,
             fontWeight: FontWeight.bold,
+            fontFamily: 'Oswald',
 
           ),
         ),
@@ -1383,10 +1435,11 @@ class cert extends StatelessWidget {
                 Center(
                   child: Text(
                     'Number of Certificates : 0',
-                    style: GoogleFonts.openSans(
+                    style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
-                        fontSize: 15
+                        fontSize: 15,
+                      fontFamily: 'OpenSans',
                     ),
                   ),
                 ),
@@ -1407,8 +1460,9 @@ class cert extends StatelessWidget {
                   child: Center(
                     child: Text(
                       'empty',
-                      style: GoogleFonts.openSans(
+                      style: TextStyle(
                         color: Colors.white,
+                        fontFamily: 'OpenSans',
                       ),
                     ),
                   ),
@@ -1427,8 +1481,9 @@ class cert extends StatelessWidget {
                   child: Center(
                     child: Text(
                       'empty',
-                      style: GoogleFonts.openSans(
+                      style: TextStyle(
                         color: Colors.white,
+                        fontFamily: 'OpenSans',
                       ),
                     ),
                   ),
@@ -1447,8 +1502,9 @@ class cert extends StatelessWidget {
                   child: Center(
                     child: Text(
                       'empty',
-                      style: GoogleFonts.openSans(
+                      style: TextStyle(
                         color: Colors.white,
+                        fontFamily: 'OpenSans',
                       ),
                     ),
                   ),
@@ -1467,8 +1523,9 @@ class cert extends StatelessWidget {
                   child: Center(
                     child: Text(
                       'empty',
-                      style: GoogleFonts.openSans(
+                      style: TextStyle(
                         color: Colors.white,
+                        fontFamily: 'OpenSans',
                       ),
                     ),
                   ),
@@ -1487,8 +1544,9 @@ class cert extends StatelessWidget {
                   child: Center(
                     child: Text(
                       'empty',
-                      style: GoogleFonts.openSans(
+                      style: TextStyle(
                         color: Colors.white,
+                        fontFamily: 'OpenSans',
                       ),
                     ),
                   ),
